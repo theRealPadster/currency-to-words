@@ -23,7 +23,7 @@ npm install currency-to-words --save
 ### Usage
 
 ```js
-import { CurrencyToWords } from 'currency-to-words'
+const CurrencyToWords = require('currency-to-words');
 ```
 
 ```js
