@@ -1,4 +1,4 @@
-import {  oneDigit,  twoDigits,  threeDigits,  GetNumericGroupTitle} from "./converter.jsx";
+const { oneDigit, twoDigits, threeDigits, GetNumericGroupTitle } = require("./converter.jsx");
 
 const convertToWords = (currency) => {
   if (currency !=0 && !currency) return "invalid input";
@@ -38,8 +38,8 @@ const completeCentsWords = (cents, centAmountWord = "cent") => {
   return ` and ${cents} ` + (cents === "one" ? `${centAmountWord}` : `${centAmountWord}s`);
 };
 
-export const CurrencyToWords = (value, dollarText = "dollar", centText = "cent") => {
-  
+const CurrencyToWords = (value, dollarText = "dollar", centText = "cent") => {
+
   const currency = (value + "").replace(" ", "").split(".");
 
   const dollarInWords = convertToWords(Number.parseInt(currency[0]));
@@ -55,4 +55,4 @@ export const CurrencyToWords = (value, dollarText = "dollar", centText = "cent")
   return completeDollarWords(dollarInWords, dollarText) + completeCentsWords(centsInWords, centText);
 };
 
-export default CurrencyToWords;
+module.exports = CurrencyToWords;

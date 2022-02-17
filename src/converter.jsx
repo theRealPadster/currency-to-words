@@ -1,4 +1,4 @@
-export const oneDigit = (digit) => {
+const oneDigit = (digit) => {
   switch (digit) {
     case 1:
       return "one";
@@ -23,7 +23,7 @@ export const oneDigit = (digit) => {
   }
 };
 
-export const twoDigits = (twoDigitNumber) => {
+const twoDigits = (twoDigitNumber) => {
   switch (twoDigitNumber) {
     case 10:
       return "ten";
@@ -70,7 +70,7 @@ export const twoDigits = (twoDigitNumber) => {
   }
 };
 
-export const threeDigits = (threeDigits) => {
+const threeDigits = (threeDigits) => {
   const firstPart = oneDigit(Math.floor(threeDigits / 100)) + " hundred ";
   const secondPart = threeDigits % 100;
   return (
@@ -78,7 +78,7 @@ export const threeDigits = (threeDigits) => {
   ); //for numbers like 101
 };
 
-export const GetNumericGroupTitle = (numericGroup) => {
+const GetNumericGroupTitle = (numericGroup) => {
   switch (numericGroup) {
     default:
     case 1: //hundreds doesn't need
@@ -90,7 +90,7 @@ export const GetNumericGroupTitle = (numericGroup) => {
   }
 };
 
-export default {
+module.exports = {
   oneDigit,
   twoDigits,
   threeDigits,

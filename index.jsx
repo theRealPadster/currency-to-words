@@ -1,1 +1,1 @@
-export * from './src/currencyToWords.jsx'
+module.exports = require('./src/currencyToWords.jsx');
